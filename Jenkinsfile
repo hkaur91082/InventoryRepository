@@ -6,7 +6,7 @@ pipeline {
             steps {
                 
                 withMaven(maven:'maven3.6'){
-                 sh 'mvn clean install'
+                 bat 'mvn clean install'
             }
         }
         }
@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                withMaven(maven:'maven3.6'){
-                 sh 'mvn deploy'
+                bat 'mvn deploy'
             }
             }
         }
