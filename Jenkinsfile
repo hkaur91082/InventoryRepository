@@ -15,12 +15,6 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
-            steps {
-               withMaven(maven:'maven3.6'){
-                bat 'mvn deploy'
-            }
-            }
-        }
+        
     }
 }
